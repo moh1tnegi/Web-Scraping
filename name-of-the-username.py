@@ -1,3 +1,4 @@
+
 import requests
 from lxml import html
 
@@ -18,5 +19,7 @@ if len(data) == 0:
 	print("Not a valid handle")
 
 else:
+	print("Name of the user:")
 	for i in range(3, len(data[0])):
 		print(data[0][i], end ="")
+	print('\n')
