@@ -53,6 +53,5 @@ def main():
 	foundation_resources(link)
 
 
-
 if __name__ == '__main__':
 	main()
