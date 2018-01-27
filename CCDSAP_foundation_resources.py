@@ -13,7 +13,7 @@ def foundation_resources(link):
 	print('1. Foundation.\n2. Advanced.\n3. Expert.')
 	usrIn = int(input("Enter a choice: "))
 	if usrIn is 1:
-		selector = '2'
+		selector = '2' # for specific child
 		print('\nFoundation:')
 	elif usrIn is 2:
 		selector = '4'
@@ -34,18 +34,16 @@ def foundation_resources(link):
 			index += 1
 	except IndexError: # if index goes beyond lists, will move to next step
 		usrIn = int(input("Your call: ")) #user input according to lists above
-		if usrIn<1 or usrIn>index-1:
+		if usrIn<1 or usrIn>index:
 			print("Wrong Selection!")
 			usrIn = 1 # default selection
 
 	print(data[0][usrIn-1].text_content()) # prints all content inside a list
-
+	
 	# TODO : print url to specific lists! 	~
-	data = htmlElements.xpath('//*[@id="node-9685883"]\
-		/div[2]/div['+selector+']/ul[2]/li[1]/ul/li[1]/ul/li[1]/a')
+	data = htmlElements.xpath('//*[@id="node-9685883"]/div[2]/div[2]/ul[2]/li[1]/ul/li[1]/ul/li[1]/a')
 	# prints url of the very first list in Basic
-	print(data[0].text_content()+ ': ' + (data[0].attrib)['href'] \
-		+ '\n')
+	print(data[0].text_content()+ ': ' + (data[0].attrib)['href'] + '\n')
 
 
 def main():
