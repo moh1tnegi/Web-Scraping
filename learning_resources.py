@@ -31,6 +31,5 @@ def learning_resources(htmlElements):
 		if usrIn<1 or usrIn>index:
 			print("\nWrong Selection!")
 			usrIn = 1 # default selection
-
 	yield usrIn
 	yield selector
