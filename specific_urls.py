@@ -34,3 +34,5 @@ def specific_urls(htmlElements, usrIn, selector):
 			_ = data(i, j, k) # ignore lvalue, its only for catching exception for outer loop
 		except IndexError:
 			return
+
+		
