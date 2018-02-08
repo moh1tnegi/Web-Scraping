@@ -5,6 +5,7 @@ import specific_urls as su
 
 
 if __name__ == '__main__':
+	print('Please Wait!!!')
 	link = 'https://www.codechef.com'
 	pageLink = link + '/certification/prepare#foundation'
 
