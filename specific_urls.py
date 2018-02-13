@@ -27,8 +27,11 @@ def specific_urls(htmlElements, usrIn, selector):
 				try:
 					k += 1 # list children incrementing from 1
 					# printing content and its url
+					link = (((data(i, j, k))[0]).attrib)['href']
+					if link[0] == '/':
+						link = 'https://www.codechef.com'+link
 					print(str(k)+'. '+(data(i, j, k))[0].text_content()+ ': ' \
-						+ (((data(i, j, k))[0]).attrib)['href']+'\n')
+						+ link +'\n')
 				except IndexError:
 					break
 			_ = data(i, j, k) # ignore lvalue, its only for catching exception for outer loop
